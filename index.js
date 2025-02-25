@@ -11,7 +11,7 @@ search.addEventListener('click', () => {
     if (city === '')
         return;
     
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Error en la petición: ${response.status}`);
