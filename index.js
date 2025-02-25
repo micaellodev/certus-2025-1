@@ -3,6 +3,25 @@ const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
+const input = document.querySelector('.search-box input');
+const menuToggle = document.querySelector(".menu-toggle i");
+const navbar = document.querySelector(".navbar");
+const logo = document.querySelector(".logo a");
+const menu = document.querySelector(".menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    logo.classList.toggle("active");
+
+    if (navbar.classList.contains("active")) {
+        menuToggle.classList.remove("fa-bars");
+        menuToggle.classList.add("fa-times"); // Icono de "X"
+    } else {
+        menuToggle.classList.remove("fa-times");
+        menuToggle.classList.add("fa-bars"); // Icono de hamburguesa
+    }
+
+});
 
 search.addEventListener('click', () => {
     const APIKey = '608f35602fa3206cc03b16e9135840fe';
@@ -92,5 +111,9 @@ search.addEventListener('click', () => {
         .catch(error => {
             console.error('Se produjo un error:', error.message);
         });
-        
+});
+input.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        search.click();
+    }
 });
