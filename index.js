@@ -9,6 +9,7 @@ const menuToggleicon = document.querySelector(".menu-toggle i");
 const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo a");
 const menu = document.querySelector(".menu-toggle");
+const menuItems = document.querySelectorAll(".navbar a");
 
 menuToggle.addEventListener("click", () => {
     navbar.classList.toggle("active");
@@ -21,6 +22,14 @@ menuToggle.addEventListener("click", () => {
         menuToggleicon.classList.add("fa-bars"); // Icono de hamburguesa
     }
 
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navbar.classList.remove("active"); // Cierra el menú
+            menuToggleicon.classList.remove("fa-times");
+            menuToggleicon.classList.add("fa-bars"); // Icono de hamburguesa
+        });
+    });
 });
 
 search.addEventListener('click', () => {
