@@ -4,21 +4,21 @@ const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 const input = document.querySelector('.search-box input');
-const menuToggle = document.querySelector(".menu-toggle i");
+const menuToggle = document.querySelector(".menu-toggle");
+const menuToggleicon = document.querySelector(".menu-toggle i");
 const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo a");
 const menu = document.querySelector(".menu-toggle");
 
 menuToggle.addEventListener("click", () => {
     navbar.classList.toggle("active");
-    logo.classList.toggle("active");
 
     if (navbar.classList.contains("active")) {
-        menuToggle.classList.remove("fa-bars");
-        menuToggle.classList.add("fa-times"); // Icono de "X"
+        menuToggleicon.classList.remove("fa-bars");
+        menuToggleicon.classList.add("fa-times"); // Icono de "X"
     } else {
-        menuToggle.classList.remove("fa-times");
-        menuToggle.classList.add("fa-bars"); // Icono de hamburguesa
+        menuToggleicon.classList.remove("fa-times");
+        menuToggleicon.classList.add("fa-bars"); // Icono de hamburguesa
     }
 
 });
