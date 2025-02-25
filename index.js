@@ -16,18 +16,18 @@ menuToggle.addEventListener("click", () => {
 
     if (navbar.classList.contains("active")) {
         menuToggleicon.classList.remove("fa-bars");
-        menuToggleicon.classList.add("fa-times"); // Icono de "X"
+        menuToggleicon.classList.add("fa-times");
     } else {
         menuToggleicon.classList.remove("fa-times");
-        menuToggleicon.classList.add("fa-bars"); // Icono de hamburguesa
+        menuToggleicon.classList.add("fa-bars");
     }
 
 
     menuItems.forEach(item => {
         item.addEventListener("click", () => {
-            navbar.classList.remove("active"); // Cierra el menú
+            navbar.classList.remove("active");
             menuToggleicon.classList.remove("fa-times");
-            menuToggleicon.classList.add("fa-bars"); // Icono de hamburguesa
+            menuToggleicon.classList.add("fa-bars");
         });
     });
 });

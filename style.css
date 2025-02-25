@@ -237,7 +237,7 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        display: none; /* Ocultar menú por defecto en móvil */
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -257,11 +257,11 @@ body {
         color: white;
     }
     .navbar.active {
-        display: flex; /* Mostrar menú cuando esté activo */
+        display: flex;
     }
 
     .menu-toggle {
-        display: block; /* Mostrar el icono de menú */
+        display: block;
         font-size: 2rem;
         position: absolute;
         right: 20px;
